@@ -3,8 +3,7 @@ import pandas as pd
 import os 
 
 def normalize_ingredients(ingredients, model="gpt-4o", temperature=0): 
-  # api_key = os.environ["OPENAI_KEY"]
-  api_key = "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"
+  api_key = os.getenv("OPENAI_KEY")
   client = OpenAI(api_key=api_key)
 
   prompt = """
